@@ -17,19 +17,31 @@ public class Cell
     Terrain terrain;
     Effect effect;
 
+    public Cell()
+    {
+        this.terrain = Terrain.Grass;
+        this.effect = Effect.NoEffect;
+    }
+
+    public Cell(Terrain t)
+    {
+        this.effect = Effect.NoEffect;
+        this.terrain = t;
+    }
+
     public Cell(Terrain t, Effect e)
     {
         this.terrain = t;
         this.effect = e;
     }
 
-    public void ApplyEffect()
+    public void ApplyEffect(Effect e)
     {
-
+        this.effect = e;
     }
 
-    public void getEffect()
+    public Effect getEffect()
     {
-
+        return this.effect;
     }
 }
